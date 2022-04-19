@@ -1,7 +1,8 @@
 {
   "name": "nowadays-web",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Nowadays",
   "scripts": {
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
