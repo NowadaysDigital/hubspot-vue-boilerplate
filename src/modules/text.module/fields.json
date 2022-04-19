@@ -1,0 +1,23 @@
+[
+  {
+   "allow_new_line": false,
+   "display_width": null,
+   "id": "dca8ea4d-1e4c-33c7-9e91-666898cb9ea4",
+   "label": "Text",
+   "locked": false,
+   "name": "text_field",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "type": "text",
+   "id": "2443eacd-e8ae-c4b2-46d8-82ba951c96b3",
+   "validation_regex": "",
+   "label": "module_name",
+   "name": "module_name",
+   "default": "Text",
+   "locked": true
+  }
+ ]

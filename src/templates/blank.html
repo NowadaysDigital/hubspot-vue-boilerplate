@@ -1,0 +1,13 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Blank
+  screenshotPath: ../images/template-previews/blank.png
+-->
+{% extends './layouts/index.html' %}
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' %}
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

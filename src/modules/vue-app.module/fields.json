@@ -1,0 +1,22 @@
+[
+  {
+    "default": 0,
+    "min": 0,
+    "max": 100,
+    "display": "slider",
+    "label": "Starting number of reasons",
+    "locked": false,
+    "name": "initial_count",
+    "required": false,
+    "type": "number"
+  },
+  {
+    "type": "text",
+    "id": "2443eacd-e8ae-c4b2-46d8-82ba951c96b3",
+    "validation_regex": "",
+    "label": "module_name",
+    "name": "module_name",
+    "default": "App",
+    "locked": true
+   }
+]

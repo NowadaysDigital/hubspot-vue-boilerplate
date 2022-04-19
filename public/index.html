@@ -1,0 +1,38 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css)) }}
+    {% endif %}
+    {# To see a full list of what is included via standard_header_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {{ standard_header_includes }}
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+      {{ require_css(get_asset_url("<%= htmlWebpackPlugin.files.css[css] %>")) }}
+    <% } %>
+
+    <% for (var js in htmlWebpackPlugin.files.js) { %>
+      {{ require_js(get_asset_url("<%= htmlWebpackPlugin.files.js[js] %>"), { defer: true }) }}
+    <% } %>
+
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+      {{ require_js(get_asset_url("<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"), { defer: true }) }}
+    <% } %>
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      {% block body %}
+      {% endblock body %}
+    </div>
+    {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {{ standard_footer_includes }}
+  </body>
+</html>
