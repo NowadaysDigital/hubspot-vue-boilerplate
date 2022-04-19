@@ -2,7 +2,7 @@
   "name": "nowadays-web",
   "version": "0.1.0",
   "private": false,
-  "author": "Nowadays",
+  "author": "Nowadays (https://nowadaysdigital.com)",
   "scripts": {
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
