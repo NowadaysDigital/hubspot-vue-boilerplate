@@ -2,6 +2,8 @@ const HubSpotAutoUploadPlugin = require('@hubspot/webpack-cms-plugins/HubSpotAut
 const { defineConfig } = require('@vue/cli-service');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const defaultPortal = 'dev';
+
 module.exports = defineConfig({
   transpileDependencies: true,
   filenameHashing: false,
@@ -29,11 +31,14 @@ module.exports = defineConfig({
       return args;
     });
 
-    config
-      .plugin('autoupload')
-      .use(HubSpotAutoUploadPlugin, [
-        { portal: 'dev', autoupload: true, src: 'dist', dest: 'nowadays-web' },
-      ]);
+    config.plugin('autoupload').use(HubSpotAutoUploadPlugin, [
+      {
+        portal: defaultPortal,
+        autoupload: true,
+        src: 'dist',
+        dest: 'nowadays-web',
+      },
+    ]);
 
     config.plugin('webpack-copy').use(CopyWebpackPlugin, [
       {

@@ -1,24 +1,34 @@
-# nowadays-web
+# Hubspot Vue 3 Boilerplate
+
+This is a boilerplate for Hubspot themes using Vue 3 and vue/cli.
+It is based on the [cms vue boilerplate](https://github.com/HubSpot/cms-vue-boilerplate)
+
+## Hubspot setup
+  ```
+  npm install -g @hubspot/cli
+  ```
+1. Create hubspot config file to be able to upload your theme to hubspot
+  ```
+  hs init
+  ```
+2. Change default portal variable in vue.config.js
+  ```
+  const defaultPortal = 'dev' <-- change this to the name of your portal in hubspot.config.yml
+  ```
 
 ## Project setup
-```
-npm install
-```
+1. Install dependencies
+  ```
+  npm install
+  ```
+2. Build and upload to hubspot
+   1. Used to build and upload once
+      ```
+      npm run build
+      ```
+   2. Used to build and upload when changes occur
+      ```
+      npm run watch
+      ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
