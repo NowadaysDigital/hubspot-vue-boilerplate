@@ -15,7 +15,7 @@ It is based on the [cms vue boilerplate](https://github.com/HubSpot/cms-vue-boil
   ```
   const defaultPortal = 'dev' <-- change this to the name of your portal in hubspot.config.yml
   ```
-
+\
 ## Project setup
 1. Install dependencies
   ```
@@ -30,5 +30,8 @@ It is based on the [cms vue boilerplate](https://github.com/HubSpot/cms-vue-boil
       ```
       npm run watch
       ```
+
+## Contributions
+If you have any
 
 
