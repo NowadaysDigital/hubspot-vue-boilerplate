@@ -3,6 +3,7 @@ const { defineConfig } = require('@vue/cli-service');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const defaultPortal = 'dev';
+const destination = 'hubspot-vue-boilerplate';
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -36,7 +37,7 @@ module.exports = defineConfig({
         portal: defaultPortal,
         autoupload: true,
         src: 'dist',
-        dest: 'nowadays-web',
+        dest: destination,
       },
     ]);
 
